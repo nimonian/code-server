@@ -3,7 +3,7 @@ class Container {
     Object.keys(data).forEach(k => (this[k] = data[k]))
   }
 
-  getPort() {
+  get port() {
     const bindings = this.HostConfig.PortBindings['8080/tcp']
     return bindings && bindings[0] && bindings[0].HostPort
   }
